@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Program Files/JetBrains/Graph/graph.h
+map
+-
+string
+-
+vector
+-
+iostream
+-
+
+D:/Program Files/JetBrains/Graph/main.cpp
+graph.h
+D:/Program Files/JetBrains/Graph/graph.h
+
