@@ -9,6 +9,7 @@
 #define DATA_STRUCTURE_AND_ALGORITHM_GRAPH_H
 #include <unordered_map>
 #include <string>
+#include <queue>
 #include <vector>
 #include <iostream>
 #include <algorithm>
@@ -24,31 +25,25 @@ private:
     unordered_map<string, int> node2index;//值到内部编号的哈希表
     unordered_map<int, string> index2node;//内部编号到值的哈希表
     int node_num = 0;//节点数
-    int find_zero_indegree();//找入度为0的点，就是找入口呗
 };
-
-int Graph::find_zero_indegree() {
-    vector<int>::iterator iter = find(indegree.begin(), indegree.end(), 0);
-    if (iter == indegree.end())
-        return -1;
-    else {
-        return iter - indegree.begin();
-    }
-}
 
 vector<string> Graph::topsort() {
     vector<string> topsort_result;
+    queue<int> Q;//辅助队列
     for (int i = 0; i < node_num; ++i) {
-        int innode = find_zero_indegree();
-        if (innode == -1) {
-            cout << "有环";//还没输出全部的点就找不到入度为0的点了，说明有环
-            break;
+        if (indegree[i] == 0) Q.push(i);
+    }
+    while (!Q.empty()) {
+        int cur = Q.front();
+        Q.pop();
+        topsort_result.push_back(index2node[cur]);
+        for (auto index : adjacencylist[cur]) {
+            if (--indegree[index] == 0)
+                Q.push(index);
         }
-        indegree[innode] = -1;//删去这个点，直接入度为-1就行了
-        topsort_result.push_back(index2node[innode]);
-        for (auto outnode : adjacencylist[innode]) {
-            --indegree[outnode];
-        }
+    }
+    if (topsort_result.size() != node_num) {
+        cout << "有环" << endl;
     }
     return topsort_result;
 }

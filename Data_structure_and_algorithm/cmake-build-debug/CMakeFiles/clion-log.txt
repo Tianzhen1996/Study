@@ -1,4 +1,4 @@
-"D:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "D:\Program Files\JetBrains\Data_structure_and_algorithm"
+"D:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "D:\Program Files\JetBrains\Github_Study\Data_structure_and_algorithm"
 -- The C compiler identification is GNU 8.1.0
 -- The CXX compiler identification is GNU 8.1.0
 -- Check for working C compiler: D:/Program Files/mingw64/bin/gcc.exe
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/Program Files/JetBrains/Data_structure_and_algorithm/cmake-build-debug
+-- Build files have been written to: D:/Program Files/JetBrains/Github_Study/Data_structure_and_algorithm/cmake-build-debug
