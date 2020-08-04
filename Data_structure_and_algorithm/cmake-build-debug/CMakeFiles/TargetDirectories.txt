@@ -1,3 +1,0 @@
-D:/Program Files/JetBrains/Github_Study/Data_structure_and_algorithm/cmake-build-debug/CMakeFiles/Data_structure_and_algorithm.dir
-D:/Program Files/JetBrains/Github_Study/Data_structure_and_algorithm/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Program Files/JetBrains/Github_Study/Data_structure_and_algorithm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
